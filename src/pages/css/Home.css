@@ -1,0 +1,31 @@
+body {
+    text-align: center;
+    background-color: #101216;
+    margin-top: 200px;
+}
+
+.title {
+    color: white;
+    font-size: 250px;
+    margin-bottom: 70px;
+}
+
+.button {
+    width: 200px;
+    height: 70px;
+
+    margin: 10px;
+
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+
+    background-color: #101216;
+
+    border: none;
+    border-radius: 10px;
+}
+.button:hover {
+    background: #161A1E;
+    color: white;
+}
