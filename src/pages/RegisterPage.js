@@ -1,42 +1,63 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './css/Register.css'
 
 const Register = () => {
+    const [registerFormData, setFormData] = useState({
+        register: '',
+        password: '',
+        username: ''
+    });
 
-    const [ID, setID] = useState("");
-    const [Password, setPassword] = useState("");
-    const [Name, setName] = useState("");
+    const registerChange = (e) => {
+        setFormData({
+            ...registerFormData,
+            [e.target.name]: e.target.value
+        });
+    };
 
-    const onIDHandler = (event) => {
-        setID(event.currentTarget.value);
-    }
-    const onPasswordHandler = (event) => {
-        setPassword(event.currentTarget.value);
-    }
-    const onNameHandler = (event) => {
-        setName(event.currentTarget.value);
-    }
+    const registerSubmit = (e) => {
+        e.preventDefault();
 
+        const form = new FormData();
+        form.append('register', registerFormData.register);
+        form.append('password', registerFormData.password);
+        form.append('username', registerFormData.username);
+
+        axios.post('/user/register', form, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        })
+        .then(response => {
+            console.log(response.data);
+            // Handle response data
+        })
+        .catch(error => {
+            console.log(error);
+            // Handle error
+        });
+    };
+    
     return (
-        <div className='registerDiv'>
-            <div style={{textAlign: 'center', color: 'white', fontSize: '140px', marginRight: '200px', marginTop: '40px'}}>
-                Register to
-                <br/>
-                Qlog
+        <div className='register-form'>
+            <div className='register-form-header'>
+                <h1>Sign up to Qlog</h1>
             </div>
+            <div className='register-form-body'>
+                <form onSubmit={registerSubmit}>
+                        <label for="register_field">email address</label>
+                        <input type="text" name="register" id="register_field" onChange={registerChange}></input>
 
-            <form className='registerForm'>
-                    <label>ID</label>
-                    <input type="text" value={ID} onChange={onIDHandler}></input>
+                        <label for="password">Password</label>
+                        <input type="password" name='password' id='password' onChange={registerChange}></input>
 
-                    <label>Password</label>
-                    <input type="password" value={Password} onChange={onPasswordHandler}></input>
-
-                    <label>Name</label>
-                    <input type="text" value={ID} onChange={onNameHandler}></input>
-            
-                    <button className="button" type="submit" style={{ marginTop: "50px"}}>회원가입</button>
-            </form>
+                        <label for="username">Username</label>
+                        <input type="text" name='username' id='username' onChange={registerChange}></input>
+                
+                        <input type='submit' name='commit' value='Sign up' className='register-form-submit'></input>
+                </form>
+            </div>
         </div>
     );
 };

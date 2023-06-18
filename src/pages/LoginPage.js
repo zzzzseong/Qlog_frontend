@@ -1,35 +1,48 @@
 import React, { useState } from 'react';
 
 const Login = () => {
+    const [formData, setFormData] = useState({
+        login: '',
+        password: ''
+    });
 
-    const [ID, setID] = useState("");
-    const [Password, setPassword] = useState("");
-    const [Name, setName] = useState("");
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
-    const onIDHandler = (event) => {
-        setID(event.currentTarget.value);
-    }
-    const onPasswordHandler = (event) => {
-        setPassword(event.currentTarget.value);
-    }
+        fetch('http://localhost:8080/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            },
+            body: new URLSearchParams(formData).toString()
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            // Handle response data
+        })
+        .catch(error => {
+            // Handle error
+            console.log(error);
+        });
+    };
 
     return (
-        <div className='registerDiv'>
-            <div style={{textAlign: 'center', color: 'white', fontSize: '140px', marginRight: '200px', marginTop: '10px'}}>
-                Sign in to
-                <br/>
-                Qlog
+        <div className='login-form'>
+            <div className='login-form-header'>
+                <h1>Sign in to Qlog</h1>
             </div>
+            <div className='login-form-body'>
+                <form onSubmit={handleSubmit}>
+                        <label for="login_field">Username or email address</label>
+                        <input type="text" name="login" id="login_field"></input>
 
-            <form className='registerForm'>
-                    <label>ID</label>
-                    <input type="text" value={ID} onChange={onIDHandler}></input>
-
-                    <label>Password</label>
-                    <input type="password" value={Password} onChange={onPasswordHandler}></input>
-            
-                    <button className="button" type="submit" style={{ marginTop: "50px"}}>로그인</button>
-            </form>
+                        <label for="password">Password</label>
+                        <input type="password" name='password' id='password'></input>
+                
+                        <input type='submit' name='commit' value='Sign in' className='login-form-submit'></input>
+                </form>
+            </div>
         </div>
     );
 };

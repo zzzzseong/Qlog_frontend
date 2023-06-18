@@ -1,6 +1,5 @@
 body {
     background-color: #101216;
-    margin-top: 200px;
 }
 
 .title {
@@ -27,4 +26,39 @@ body {
 .button:hover {
     background: #161A1E;
     color: white;
+}
+
+/*          register           */
+.register-form-header {
+    color: white;
+    text-align: center;
+}
+.register-form-body form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.register-form-body label {
+    margin-bottom: 10px;
+}
+.register-form-submit {
+    margin-top: 40px;
+}
+
+
+/*          login           */
+.login-form-header {
+    color: white;
+    text-align: center;
+}
+.login-form-body form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-form-body label {
+    margin-bottom: 10px;
+}
+.login-form-submit {
+    margin-top: 40px;
 }
