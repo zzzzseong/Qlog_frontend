@@ -19,9 +19,9 @@ const Register = () => {
         e.preventDefault();
 
         const form = new FormData();
-        form.append('register', registerFormData.register);
+        form.append('loginId', registerFormData.register);
         form.append('password', registerFormData.password);
-        form.append('username', registerFormData.username);
+        form.append('name', registerFormData.username);
 
         axios.post('/user/register', form, {
             headers: {
