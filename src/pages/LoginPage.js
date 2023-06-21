@@ -7,20 +7,33 @@ const Login = () => {
         password: ''
     });
 
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch('http://localhost:8080/login', {
-            method: 'POST',
+        const form = new FormData();
+        form.append('loginId', formData.login);
+        form.append('password', formData.password);
+
+        axios.post('/user/login', form, {
             headers: {
                 'Content-Type': 'multipart/form-data'
-            },
-            body: new URLSearchParams(formData).toString()
+            }
         })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
+        .then(response => {
             // Handle response data
+            if(response.data) { //true
+                console.log("login success: ", response.data);
+                window.location.href = '/home';
+            } else { //false
+                alert("ID, Password를 확인해주세요.");
+            }
         })
         .catch(error => {
             // Handle error
@@ -35,11 +48,11 @@ const Login = () => {
             </div>
             <div className='login-form-body'>
                 <form onSubmit={handleSubmit}>
-                        <label for="login_field">Username or email address</label>
-                        <input type="text" name="login" id="login_field"></input>
+                        <label htmlFor="login_field">Username or email address</label>
+                        <input type="text" name="login" id="login_field" onChange={handleChange}></input>
 
-                        <label for="password">Password</label>
-                        <input type="password" name='password' id='password'></input>
+                        <label htmlFor="password">Password</label>
+                        <input type="password" name='password' id='password' onChange={handleChange}></input>
                 
                         <input type='submit' name='commit' value='Sign in' className='login-form-submit'></input>
                 </form>
