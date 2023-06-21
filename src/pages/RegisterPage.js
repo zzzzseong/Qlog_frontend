@@ -43,20 +43,23 @@ const Register = () => {
     return (
         <div className='register-form'>
             <div className='register-form-header'>
+                <div onClick={() => {
+                    window.location.href = '/';
+                }}>뒤로가기</div>
                 <h1>Sign up to Qlog</h1>
             </div>
             <div className='register-form-body'>
                 <form onSubmit={registerSubmit}>
-                        <label htmlFor="register_field">email address</label>
-                        <input type="text" name="register" id="register_field" onChange={registerChange}></input>
+                        <label htmlFor="register_field">email address</label><br/>
+                        <input className='register-form-input' type="text" name="register" id="register_field" onChange={registerChange}></input><br/><br/>
 
-                        <label htmlFor="password">Password</label>
-                        <input type="password" name='password' id='password' onChange={registerChange}></input>
+                        <label htmlFor="password">Password</label><br/>
+                        <input className='register-form-input' type="password" name='password' id='password' onChange={registerChange}></input><br/><br/>
 
-                        <label htmlFor="username">Username</label>
-                        <input type="text" name='username' id='username' onChange={registerChange}></input>
+                        <label htmlFor="username">Username</label><br/>
+                        <input className='register-form-input' type="text" name='username' id='username' onChange={registerChange}></input><br/><br/>
                 
-                        <input type='submit' name='commit' value='Sign up' className='register-form-submit'></input>
+                        <input className='register-form-submit' type='submit' name='commit' value='Sign up'></input>
                 </form>
             </div>
         </div>

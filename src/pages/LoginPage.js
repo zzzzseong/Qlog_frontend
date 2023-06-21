@@ -44,17 +44,20 @@ const Login = () => {
     return (
         <div className='login-form'>
             <div className='login-form-header'>
+                <div onClick={() => {
+                    window.location.href = '/';
+                }}>뒤로가기</div>
                 <h1>Sign in to Qlog</h1>
             </div>
             <div className='login-form-body'>
                 <form onSubmit={handleSubmit}>
-                        <label htmlFor="login_field">Username or email address</label>
-                        <input type="text" name="login" id="login_field" onChange={handleChange}></input>
+                        <label htmlFor="login_field">Username or email address</label><br/>
+                        <input className='login-form-input' type="text" name="login" id="login_field" onChange={handleChange}></input><br/><br/>
 
-                        <label htmlFor="password">Password</label>
-                        <input type="password" name='password' id='password' onChange={handleChange}></input>
+                        <label htmlFor="password">Password</label><br/>
+                        <input className='login-form-input' type="password" name='password' id='password' onChange={handleChange}></input><br/><br/>
                 
-                        <input type='submit' name='commit' value='Sign in' className='login-form-submit'></input>
+                        <input className='login-form-submit' type='submit' name='commit' value='Sign in'></input>
                 </form>
             </div>
         </div>
