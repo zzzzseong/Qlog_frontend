@@ -125,3 +125,76 @@ body {
 
     margin-top: 50px;
 }
+
+/*          home           */
+.home-title {
+    color: white;
+    font-size: 50px;
+    
+    padding: 20px;
+    margin-left: 20px;
+}
+.home-body {
+    color: white;
+    width: 90%;
+    margin-left: 5%;
+    
+    height: 800px;
+}
+.home-left {
+    float: left;
+    background-color: #161A1E;
+    
+    border-radius: 10px;
+    border: 2px solid #1C262F;
+
+    width: 59%;
+    height: 100%;
+}
+.home-left-container {
+    padding: 20px;
+}
+.home-left-container .home-left-profile {
+    padding: 10px;
+    height: 300px;
+}
+.home-left-profile img {
+    float: left;
+    height: 280px;
+    width: 280px;
+}
+.home-left-container .home-left-card {
+    padding: 10px;
+    height: 200px;
+}
+.home-left-card div {
+    background-color: red;
+    height: 130px;
+    width: 300px;
+}
+
+.home-right {
+    float: right;
+    background-color: #161A1E;
+
+    border-radius: 10px;
+    border: 2px solid #1C262F;
+
+    width: 39%;
+    height: 100%;
+}
+.home-right-container {
+    padding: 20px;
+}
+.home-right-card {
+    background-color: red;
+    padding: 10px;
+
+    height: 200px;
+}
+.home-right-comments {
+    background-color: blue;
+    padding: 10px;
+
+    height: 520px;
+}
