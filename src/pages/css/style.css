@@ -127,12 +127,25 @@ body {
 }
 
 /*          home           */
-.home-title {
+.home-header {
+    height: 200px;
     color: white;
-    font-size: 50px;
+}
+.home-title {
+    float: left;
+    font-size: 80px;
     
-    padding: 20px;
+    padding: 40px;
     margin-left: 20px;
+}
+.home-signout {
+    float: right;
+    font-size: 30px;
+
+    padding: 40px;
+    margin-right: 20px;
+    margin-top: 20px;
+
 }
 .home-body {
     color: white;

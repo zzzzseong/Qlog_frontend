@@ -1,9 +1,17 @@
 const Home = () => { 
+
+    const handleSignOut = () => {
+        //server 측 session 삭제 필요
+        document.cookie = "JSESSIONID=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"
+        window.location.href = '/';
+    };
+
     return (
         <div>
             <div className="home-header">
-                <h1 className="home-title">Qlog</h1>
+                <span className="home-title">Qlog</span>
                 
+                <span className="home-signout" onClick={handleSignOut}>sign out</span>
             </div>
             <div className="home-body">
                 <div className="home-left">

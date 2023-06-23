@@ -29,7 +29,7 @@ const Login = () => {
         .then(response => {
             // Handle response data
             if(response.data) { //true
-                console.log("login success: ", response.data);
+                console.log("login success: ", response.data);                
                 window.location.href = '/home';
             } else { //false
                 alert("ID, Password를 확인해주세요.");

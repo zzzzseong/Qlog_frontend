@@ -15,6 +15,30 @@ const Register = () => {
         });
     };
 
+    const duplicationSubmit = (e) => {
+        e.preventDefault();
+
+        const form = new FormData();
+        form.append('loginId', registerFormData.register);
+    
+        axios.post('/user/duplication', form, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        })
+        .then(response => {
+            // Handle response data
+            if (response.data) {
+                registerSubmit(e);
+            } else {
+                alert("이미 등록되어 있는 이메일입니다.");
+            }
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    };
+
     const registerSubmit = (e) => {
         e.preventDefault();
 
@@ -49,7 +73,7 @@ const Register = () => {
                 <h1>Sign up to Qlog</h1>
             </div>
             <div className='register-form-body'>
-                <form onSubmit={registerSubmit}>
+                <form onSubmit={duplicationSubmit}>
                         <label htmlFor="register_field">email address</label><br/>
                         <input className='register-form-input' type="text" name="register" id="register_field" onChange={registerChange}></input><br/><br/>
 
