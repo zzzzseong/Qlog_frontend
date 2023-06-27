@@ -1,7 +1,7 @@
 const Qcard = (props) => {
     return (
         <div>
-            Q. What is java?
+            {props.name}
         </div>
     )
 };
