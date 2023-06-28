@@ -18,6 +18,7 @@ const Home = () => {
     const handleLoad= () => {
         axios.get("/user/read")
         .then(response => {
+            //config 설정해서 image url 받고 전달
             console.log(response.data);    
             // profile
             const profile = document.getElementsByClassName('home-left-profile')[0];
@@ -38,18 +39,6 @@ const Home = () => {
         });
     };
     handleLoad();
-
-    const handleReadImage = () => {
-        axios.get("/user/image/read")
-        .then(response => {
-            document.getElementsByClassName('home-left-profile')[0].children[0].src = response.data;
-        })
-        .catch(error => {
-            console.log(error);
-        });
-    };
-    handleReadImage();
-    
 
     return (
         <div>
