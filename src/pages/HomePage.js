@@ -38,6 +38,17 @@ const Home = () => {
         });
     };
     handleLoad();
+
+    const handleReadImage = () => {
+        axios.get("/user/image/read")
+        .then(response => {
+            document.getElementsByClassName('home-left-profile')[0].children[0].src = response.data;
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    };
+    handleReadImage();
     
 
     return (

@@ -1,7 +1,7 @@
 const Profile = (props) => {
     return (
         <div>
-            <img src="./test.png"/>
+            <img src={props.imagePath}/>
             <div>{props.name} : {props.point}pt</div>
             <div>follower: 300 following: 300</div>
             <div>Qcard: 150 solved: 142</div>
