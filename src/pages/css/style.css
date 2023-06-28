@@ -56,7 +56,7 @@ body {
     padding: 60px;
     background-color: #161A1E;
     border-radius: 10px;
-    border: 2px solid #1C262F;
+    border: 1px solid #3b4a59;
 }
 .register-form-body form .register-form-input {
     width: 100%;
@@ -105,7 +105,7 @@ body {
     padding: 60px;
     background-color: #161A1E;
     border-radius: 10px;
-    border: 2px solid #1C262F;
+    border: 1px solid #1C262F;
 }
 .login-form-body form .login-form-input {
     width: 100%;
@@ -159,7 +159,7 @@ body {
     background-color: #161A1E;
     
     border-radius: 10px;
-    border: 2px solid #1C262F;
+    border: 1px solid #3b4a59;
 
     width: 59%;
     height: 100%;
@@ -167,15 +167,72 @@ body {
 .home-left-container {
     padding: 20px;
 }
+
 .home-left-container .home-left-profile {
     padding: 10px;
     height: 300px;
+}
+.home-left-profile-info {   
+    height: 280px;
+    width: auto;
+
+    margin-left: 320px;
+
+    border-radius: 10px;
+    border: 1px solid #3b4a59;
 }
 .home-left-profile img {
     float: left;
     height: 280px;
     width: 280px;
 }
+.home-left-profile-info > div {
+    padding: 20px;
+}
+.profile-info-countBox {
+    height: 80px;
+}
+.profile-header-title {
+    height: 60px;
+}
+.profile-header {
+    height: 160px;
+}
+.profile-name {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.profile-point {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+.profile-countBox-left {
+    float: left;
+    width: 48%;
+    height: 100%;
+
+    background-color: #161A1E;
+    border-radius: 10px;
+    border: 1px solid #3b4a59;
+}
+.profile-countBox-left div {
+    padding: 10px;
+}
+.profile-countBox-right {
+    float: right;
+    width: 48%;
+    height: 100%;
+
+    background-color: #161A1E;
+    border-radius: 10px;
+    border: 1px solid #3b4a59;
+}
+.profile-countBox-right div {
+    padding: 10px;
+}
+
 .home-left-container .home-left-card {
     padding: 10px;
     height: 200px;
@@ -190,7 +247,7 @@ body {
     background-color: #161A1E;
 
     border-radius: 10px;
-    border: 2px solid #1C262F;
+    border: 1px solid #3b4a59;
 
     width: 39%;
     height: 100%;
@@ -205,7 +262,7 @@ body {
     padding: 20px;
 
     border-radius: 10px;
-    border: 2px solid #1C262F;
+    border: 1px solid #3b4a59;
     background-color: #101216;
 }
 .home-right-body {
