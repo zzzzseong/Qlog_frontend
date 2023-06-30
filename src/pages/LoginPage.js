@@ -44,10 +44,10 @@ const Login = () => {
     return (
         <div className='login-form'>
             <div className='login-form-header'>
-                <div onClick={() => {
+                <img className='login-form-back' onClick={() => {
                     window.location.href = '/';
-                }}>뒤로가기</div>
-                <h1>Sign in to Qlog</h1>
+                }} src='/logo.png'></img>
+                <div className="login-form-title">Sign in to Qlog</div>
             </div>
             <div className='login-form-body'>
                 <form onSubmit={handleSubmit}>

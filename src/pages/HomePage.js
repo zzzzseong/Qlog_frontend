@@ -43,7 +43,7 @@ const Home = () => {
     return (
         <div>
             <div className="home-header">
-                <span className="home-title">Qlog</span>
+                <img className="home-title" src='/logo.png'></img>
                 <span className="home-signout" onClick={handleSignOut}>sign out</span>
             </div>
             <div className="home-body">

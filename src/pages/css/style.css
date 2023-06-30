@@ -4,8 +4,6 @@ body {
 
 /*          welcome           */
 .welcome_header {
-    color: white;
-    font-size: 250px;
     margin-top: 120px;
     margin-bottom: 100px;
 }
@@ -30,20 +28,26 @@ body {
 }
 
 /*          register           */
-.register-form-header div {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-
-    padding: 30px;
+.register-form {
+    margin-bottom: 100px;
 }
-.register-form-header h1 {
+.register-form-header {
+    text-align: center;
+}
+.register-form-header .register-form-back {    
+    width: 150px;
+    padding-top: 80px;
+}
+.register-form-header .register-form-back:hover {
+    cursor: pointer;
+}
+.register-form-header .register-form-title {
     color: white;
     text-align: center;
-    font-size: 100px;
+    font-size: 50px;
 
-    margin-top: 120px;
-    margin-bottom: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .register-form-body {
     display: flex;
@@ -78,21 +82,28 @@ body {
 }
 
 
-/*          login           */
-.login-form-header div {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
 
-    padding: 30px;
+/*          login           */
+.login-form {
+    margin-bottom: 100px;
 }
-.login-form-header h1 {
+.login-form-header {
+    text-align: center;
+}
+.login-form-header .login-form-back {
+    width: 150px;
+    padding-top: 80px;
+}
+.login-form-header .login-form-back:hover {
+    cursor: pointer;
+}
+.login-form-header .login-form-title {
     color: white;
     text-align: center;
-    font-size: 100px;
+    font-size: 50px;
 
-    margin-top: 120px;
-    margin-bottom: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .login-form-body {
     display: flex;
@@ -128,13 +139,13 @@ body {
 
 /*          home           */
 .home-header {
-    height: 200px;
+    height: 153px;
     color: white;
 }
 .home-title {
     float: left;
-    font-size: 80px;
-    
+    width: 150px;
+
     padding: 40px;
     margin-left: 20px;
 }
@@ -144,8 +155,10 @@ body {
 
     padding: 40px;
     margin-right: 20px;
-    margin-top: 20px;
-
+    margin-top: 10px;
+}
+.home-signout:hover {
+    cursor: pointer;
 }
 .home-body {
     color: white;

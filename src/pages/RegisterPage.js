@@ -67,10 +67,10 @@ const Register = () => {
     return (
         <div className='register-form'>
             <div className='register-form-header'>
-                <div onClick={() => {
+                <img className='register-form-back' onClick={() => {
                     window.location.href = '/';
-                }}>뒤로가기</div>
-                <h1>Sign up to Qlog</h1>
+                }} src='/logo.png'></img>
+                <div className='register-form-title'>Sign up to Qlog</div>
             </div>
             <div className='register-form-body'>
                 <form onSubmit={duplicationSubmit}>
