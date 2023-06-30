@@ -1,8 +1,11 @@
 const Qcard = (props) => {
     return (
-        <div>
-            {props.name}
-        </div>
+        <li>
+            <div className="card">
+                <div>{props.name}</div>
+                <div>{props.question}</div>
+            </div>
+        </li>
     )
 };
 

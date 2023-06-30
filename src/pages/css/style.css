@@ -208,18 +208,21 @@ body {
 .profile-header-title {
     height: 60px;
 }
+
 .profile-header {
     height: 160px;
 }
 .profile-name {
+    display: inline-block;
     font-size: 50px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 .profile-point {
+    display: inline-block;
     font-size: 20px;
     font-weight: bold;
-    margin-right: 30px;
+    margin-left: 15px;
 }
 .profile-countBox-left {
     float: left;
@@ -254,6 +257,28 @@ body {
     height: 130px;
     width: 100%;
 }
+.home-left-cards-ul {
+
+    list-style: none;
+    height: 100%;
+
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.home-left-cards-ul li {
+    display: inline-block;
+    width: 240px;
+    height: 95%;
+    margin-right: 10px;
+
+    background-color: #157AF8;
+    border-radius: 10px;
+    border: 1px solid #3b4a59;    
+}
+.card {
+    padding: 10px;
+}
+
 
 .home-right {
     float: right;

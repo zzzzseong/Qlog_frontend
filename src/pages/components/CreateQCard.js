@@ -19,6 +19,7 @@ const CreateQCard = (props) => {
             //void response
             document.getElementsByClassName('home-right-textarea')[0].value = '';
             alert("질문이 등록되었습니다.");
+            window.location.href = '/home';
         })
         .catch(error => {
             //Handle error

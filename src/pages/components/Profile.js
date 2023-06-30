@@ -8,6 +8,7 @@ const Profile = (props) => {
                         <div className="profile-header-title">
                             <div className="profile-name">{props.name}</div>
                             <div className="profile-point">{props.point}point</div>
+                            <div>{props.introduction}</div>
                         </div>
                         {/* <div>follower: 300 following: 300</div> */}
                     </div>
