@@ -4,7 +4,9 @@ import ReactDOM from 'react-dom/client';
 
 import Qcard from './components/Qcard';
 import Profile from './components/Profile';
+import Explore from './components/Explore';
 import CreateQCard from './components/CreateQCard';
+
 
 const Home = () => {    
     const handleSignOut = (e) => {
@@ -45,19 +47,25 @@ const Home = () => {
             });
             unsolveQ.render(unsolveQArray);
             solvedQ.render(solvedQArray);
-
             // QCard
 
-            // CreateQCard
-            const createQCard = ReactDOM.createRoot(document.getElementsByClassName('home-right')[0]);
-            createQCard.render(React.createElement(CreateQCard, response.data, null));
-            // CreateQCard
+            //Explore
+            const explore = ReactDOM.createRoot(document.getElementsByClassName('home-right')[0]);
+            explore.render(React.createElement(Explore, null, null));
+            //Explore
+            
         });
     };
     handleLoad();
 
+
+    // // CreateQCard
+    // const createQCard = ReactDOM.createRoot(document.getElementsByClassName('home-right')[0]);
+    // createQCard.render(React.createElement(CreateQCard, response.data, null));
+    // // CreateQCard
+
     return (
-        <div>
+        <div className='home'>
             <div className="home-header">
                 <img className="home-title" src='/logo.png'></img>
                 <span className="home-signout" onClick={handleSignOut}>sign out</span>

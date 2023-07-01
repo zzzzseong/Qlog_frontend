@@ -138,6 +138,9 @@ body {
 }
 
 /*          home           */
+.home {
+    margin-bottom: 100px;
+}
 .home-header {
     height: 153px;
     color: white;
@@ -257,7 +260,10 @@ body {
     height: 130px;
     width: 100%;
 }
+
+
 .home-left-cards-ul {
+    padding-left: 0px;
 
     list-style: none;
     height: 100%;
@@ -269,14 +275,23 @@ body {
     display: inline-block;
     width: 240px;
     height: 95%;
-    margin-right: 10px;
+    margin-right: 20px;
 
     background-color: #157AF8;
     border-radius: 10px;
-    border: 1px solid #3b4a59;    
+    border: 3px solid white;
 }
 .card {
     padding: 10px;
+    height: 60%;
+}
+.card-username {
+    margin-bottom: 10px;
+    /* background-color: blueviolet; */
+}
+.card-question {
+    /* background-color: red; */
+
 }
 
 
@@ -344,4 +359,25 @@ body {
     width: 100%;
 
     text-align: center;
+}
+
+.explore {
+    padding: 100px;
+    height: 75%;
+}
+.explore-header {
+    text-align: center;
+}
+.explore-body {
+    text-align: center;
+}
+.top-search {
+    margin-top: 30px;
+    width: 70%;
+    height: 30px;
+}
+.bottom-submit {
+    width: 90%;
+    height: 40px;
+    margin-top: 200px;
 }
