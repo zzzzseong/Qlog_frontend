@@ -281,6 +281,10 @@ body {
     border-radius: 10px;
     border: 3px solid white;
 }
+.home-left-cards-ul li:hover {
+    cursor: pointer;
+    background-color: #4D9CFF;
+}
 .card {
     padding: 10px;
     height: 60%;
@@ -383,7 +387,7 @@ body {
 }
 .explore-header-nav button:hover {
     cursor: pointer;
-    
+    background-color: #4D9CFF;
 }
 
 .explore-header {
@@ -405,3 +409,31 @@ body {
     height: 40px;
     margin-top: 200px;
 }
+
+
+/* ======================================+===================+===================+ */
+.updateQcard {
+    padding: 20px;
+}
+.updateQcard-header {
+    height: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+.updateQcard-header-title {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    text-align: center;
+}
+.updateQcard-header-back {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    float: left;
+}
+.updateQcard-header-delete {
+    float: right;
+}
+
+/* ======================================+===================+===================+ */
