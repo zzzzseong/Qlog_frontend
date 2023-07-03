@@ -274,7 +274,7 @@ body {
 .home-left-cards-ul li {
     display: inline-block;
     width: 240px;
-    height: 95%;
+    height: 90%;
     margin-right: 20px;
 
     background-color: #157AF8;
@@ -362,17 +362,41 @@ body {
 }
 
 .explore {
-    padding: 100px;
-    height: 75%;
+    padding: 40px;
+    height: 720px;
 }
+.explore-header-nav {
+    height: 60px;
+    margin-bottom: 100px;
+}
+.explore-header-nav button {
+    float: right;
+    height: 36px;
+    width: 70px;
+    font-size: 17px;
+    background-color: #157AF8;
+    color: white;
+    font-weight: bold;
+
+    border-radius: 5px;
+    border: none;
+}
+.explore-header-nav button:hover {
+    cursor: pointer;
+    
+}
+
 .explore-header {
+    height: 300px;
     text-align: center;
 }
 .explore-body {
+    height: 360px;
     text-align: center;
 }
 .top-search {
     margin-top: 30px;
+    margin-bottom: 100px;
     width: 70%;
     height: 30px;
 }

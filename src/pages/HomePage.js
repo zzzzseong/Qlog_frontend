@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom/client';
 import Qcard from './components/Qcard';
 import Profile from './components/Profile';
 import Explore from './components/Explore';
-import CreateQCard from './components/CreateQCard';
 
 
 const Home = () => {    
@@ -20,12 +19,9 @@ const Home = () => {
     const handleLoad= () => {
         axios.get("/user/read")
         .then(response => {
-            //config 설정해서 image url 받고 전달
-            console.log(response.data);    
-            // profile
-            // const profile = document.getElementsByClassName('home-left-profile')[0];
-            // ReactDOM.render(React.createElement(Profile, response.data, null), profile);
+            console.log(response.data);
 
+            // profile
             const profile = ReactDOM.createRoot(document.getElementsByClassName('home-left-profile')[0]);
             profile.render(React.createElement(Profile, response.data, null));
             // profile
@@ -51,18 +47,12 @@ const Home = () => {
 
             //Explore
             const explore = ReactDOM.createRoot(document.getElementsByClassName('home-right')[0]);
-            explore.render(React.createElement(Explore, null, null));
+            explore.render(React.createElement(Explore, response.data, null));
             //Explore
             
         });
     };
     handleLoad();
-
-
-    // // CreateQCard
-    // const createQCard = ReactDOM.createRoot(document.getElementsByClassName('home-right')[0]);
-    // createQCard.render(React.createElement(CreateQCard, response.data, null));
-    // // CreateQCard
 
     return (
         <div className='home'>
