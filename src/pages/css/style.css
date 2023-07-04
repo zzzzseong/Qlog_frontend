@@ -294,8 +294,8 @@ body {
     /* background-color: blueviolet; */
 }
 .card-question {
-    /* background-color: red; */
-
+    background-color: red;
+    
 }
 
 
@@ -354,6 +354,9 @@ body {
     margin-top: 0px;
     margin-bottom: 10px;
     float: left;
+}
+.home-right-question-back:hover {
+    cursor: pointer;
 }
 .home-right-attribute {
     height: 90%;
@@ -432,8 +435,40 @@ body {
     margin-bottom: 10px;
     float: left;
 }
+.updateQcard-header-back:hover {
+    cursor: pointer;
+}
 .updateQcard-header-delete {
     float: right;
+    font-size: 17px;
+    font-weight: bold;
+    height: 36px;
+    width: 70px;
+
+    margin-top: 5px;
+    
+    background-color: red;
+    color: white;
+
+    border-radius: 5px;
+    border: none;
+}
+.updateQcard-header-delete:hover {
+    cursor: pointer;
+    background-color: #DE2F2F;
+}
+.updateQcard-body {
+    height: 70px;
+
+    margin-bottom: 20px;
+    padding: 20px;
+
+    border-radius: 10px;
+    border: 1px solid #3b4a59;
+    background-color: #101216;
+}
+.updateQcard h1 {
+    margin-top: 5px;
 }
 
 /* ======================================+===================+===================+ */
