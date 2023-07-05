@@ -3,10 +3,11 @@ import axios from 'axios';
 import ReactDOM from 'react-dom/client';
 
 import Explore from './Explore';
+import Comment from './Comment';
 
 const UpdateQCard = (props) => {
     const handleDelete = (e) => {
-        axios.delete('/qCard/delete/' + props.id,)
+        axios.delete('/qCard/delete/' + props.id)
         .then(response => {
             //void response
             alert("질문이 삭제되었습니다.");
@@ -22,8 +23,23 @@ const UpdateQCard = (props) => {
         right.render(React.createElement(Explore, props, null));
     };
     const handleLoad = () => {
-        const comments = ReactDOM.createRoot(document.getElementsByClassName('updateQcard-comments-ul')[0]);        
+        axios.get("qCard/readComments/" + props.id)
+        .then(response => {
+            const comments = ReactDOM.createRoot(document.getElementsByClassName('updateQcard-comments-ul')[0]);
+
+            const commentsArray = [];
+            response.data.forEach((comment) => {
+                let com = React.createElement(Comment, comment, null);
+                commentsArray.push(com);
+            });
+
+            comments.render(commentsArray);
+        })
+        .catch(error => {
+            console.log(error);
+        });
     };
+    handleLoad();
 
     return (
         <div className="updateQcard">

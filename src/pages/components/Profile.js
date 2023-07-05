@@ -1,7 +1,17 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+import ProfileSetting from './ProfileSetting';
+
 const Profile = (props) => {
+    const handleImgClick = (e) => {
+        const right = ReactDOM.createRoot(document.getElementsByClassName('home-right')[0]);
+        right.render(React.createElement(ProfileSetting, props, null));
+    };
+
     return (
         <div className="box">
-            <img src={props.imgPath}></img>
+            <img src={props.imgPath} onClick={handleImgClick}></img>
             <div className="home-left-profile-info">
                 <div>
                     <div className="profile-header">
