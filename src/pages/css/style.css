@@ -520,13 +520,13 @@ body {
 /* ======================================+===================+===================+ */
 
 .profileSetting {
-    padding: 20px;
-    background-color: #DE2F2F;
+    height: 760px;
+
+    padding: 30px;
 }
+
 .profileSetting-header {
     height: 60px;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 .profileSetting-header-back {
     margin-top: 0px;
@@ -539,4 +539,50 @@ body {
     margin-right: 20px;
 
     text-align: center;
+}
+
+.profileSetting-body {
+    height: 640px;
+    /* background-color: blue; */
+}
+.profileSetting-body-top {
+    text-align: center;
+}
+.profileSetting-body img {
+    height: 200px;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    display: inline-block;
+}
+.profileSetting-body img:hover {
+    cursor: pointer;
+}
+/* .profileSetting-body button {
+    width: 200px;
+}
+.profileSetting-body button:hover {
+    cursor: pointer;
+} */
+.profileSetting-body-top-label {
+    margin: 5px 0 20px 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #0095f6;
+    display: inline-block;
+    cursor: pointer;
+}
+.profileSetting-body-top-input {
+    display: none;
+}
+
+.profileSetting-footer {
+    height: 60px;
+    padding: 10px;
+    text-align: center;
+}
+.profileSetting-footer button {
+    width: 300px;
+    height: 40px;
 }
