@@ -154,10 +154,11 @@ body {
 }
 .home-signout {
     float: right;
-    font-size: 30px;
+    font-size: 28px;
+    font-weight: 400;
 
     padding: 40px;
-    margin-right: 20px;
+    margin-right: 30px;
     margin-top: 10px;
 }
 .home-signout:hover {
@@ -175,7 +176,7 @@ body {
     background-color: #161A1E;
     
     border-radius: 10px;
-    border: 1px solid #3b4a59;
+    border: 1px solid #1C262F;
 
     width: 59%;
     height: 100%;
@@ -187,20 +188,30 @@ body {
 .home-left-container .home-left-profile {
     padding: 10px;
     height: 300px;
+
 }
+.profile-border {
+    height: 1px;
+    width: 100%;
+    background-color: #1C262F;    
+}
+
 .home-left-profile-info {   
     height: 280px;
     width: auto;
 
     margin-left: 320px;
 
-    border-radius: 10px;
-    border: 1px solid #3b4a59;
+    /* border-radius: 10px;
+    border: 1px solid #1C262F; */
 }
 .home-left-profile img {
     float: left;
     height: 280px;
     width: 280px;
+
+    border-radius: 200px;
+    border: 3px solid #1C262F;
 }
 .home-left-profile img:hover {
     cursor: pointer;
@@ -274,15 +285,22 @@ body {
     overflow-x: auto;
     white-space: nowrap;
 }
+.home-left-cards-ul::-webkit-scrollbar {
+    height: 5px;
+}
+.home-left-cards-ul::-webkit-scrollbar-thumb {
+    background-color: #B9B9B9;
+    border-radius: 10px;
+}
 .home-left-cards-ul li {
     display: inline-block;
     width: 240px;
     height: 90%;
     margin-right: 20px;
 
-    background-color: #157AF8;
+    background-color: #151515;
     border-radius: 10px;
-    border: 3px solid white;
+    border: 1px solid white;
 }
 .home-left-cards-ul li:hover {
     cursor: pointer;
@@ -296,10 +314,6 @@ body {
     margin-bottom: 10px;
     /* background-color: blueviolet; */
 }
-.card-question {
-    background-color: red;
-    
-}
 
 
 .home-right {
@@ -307,7 +321,7 @@ body {
     background-color: #161A1E;
 
     border-radius: 10px;
-    border: 1px solid #3b4a59;
+    border: 1px solid #1C262F;
 
     width: 39%;
     height: 100%;

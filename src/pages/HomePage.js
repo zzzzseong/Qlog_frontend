@@ -64,6 +64,7 @@ const Home = () => {
                 <div className="home-left">
                     <div className="home-left-container">
                         <div className="home-left-profile">{/*profile component*/}</div>
+                        <div className='profile-border'></div>
                         <div className="home-left-card">
                             <h1>UnsolvedQ</h1>
                             <div className='home-left-cards'>
