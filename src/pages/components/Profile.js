@@ -24,12 +24,12 @@ const Profile = (props) => {
                     </div>
                     <div className="profile-info-countBox">
                         <div className="profile-countBox-left">
-                            <div>Qcard</div>
-                            <div>150</div>
+                            <div>Crafted Qcard</div>
+                            <div>{props.qcards.length}</div>
                         </div>
                         <div className="profile-countBox-right">
-                            <div>solved</div>
-                            <div>200</div>
+                            <div>Written Comment</div>
+                            <div>{props.comments.length}</div>
                         </div>
                     </div>
                 </div>

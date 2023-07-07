@@ -9,8 +9,10 @@ import Explore from './components/Explore';
 
 const Home = () => {    
     const handleSignOut = (e) => {
-        axios.put("/user/logout");
-        window.location.href = '/';
+        if(window.confirm('로그아웃 하시겠습니까?')) {
+            axios.put("/user/logout");
+            window.location.href = '/';
+        }
     };
 
     //const handleLoadImage = () => { //프로필 이미지는 따로 요청

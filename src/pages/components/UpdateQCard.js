@@ -27,7 +27,7 @@ const UpdateQCard = (props) => {
     const handleLoad = () => {
         axios.get("qCard/readComments/" + props.id)
         .then(response => {
-            console.log(response.data);
+            // console.log(response.data);
             const comments = ReactDOM.createRoot(document.getElementsByClassName('updateQcard-comments-ul')[0]);
 
             const commentsArray = [];
@@ -52,7 +52,11 @@ const UpdateQCard = (props) => {
             </div>
             <div className='updateQcard-edit'>
                 <h1>Question</h1>
-                {/* <img src='/solved.png'></img> */}
+                <img className='updateQcard-edit-img' src='/solved.png' onLoad={() => {
+                    if(!props.solved) {
+                        document.getElementsByClassName('updateQcard-edit-img')[0].style.display = 'none';
+                    }
+                }}></img>
                 {/* <button onClick={handleEdit}>edit</button> */}
             </div>
             <div className='updateQcard-body'>
