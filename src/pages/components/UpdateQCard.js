@@ -7,16 +7,18 @@ import Comment from './Comment';
 
 const UpdateQCard = (props) => {
     const handleDelete = (e) => {
-        axios.delete('/qCard/delete/' + props.id)
-        .then(response => {
-            //void response
-            alert("질문이 삭제되었습니다.");
-            window.location.href = '/home';
-        })
-        .catch(error => {
-            //Handle error
-            console.log(error);
-        });
+        if(window.confirm('정말로 삭제하시겠습니까?')) {
+            axios.delete('/qCard/delete/' + props.id)
+            .then(response => {
+                //void response
+                alert("질문이 삭제되었습니다.");
+                window.location.href = '/home';
+            })
+            .catch(error => {
+                //Handle error
+                console.log(error);
+            });
+        }
     };
     const handleBack = (e) => {
         const right = ReactDOM.createRoot(document.getElementsByClassName('home-right')[0]);
@@ -25,6 +27,7 @@ const UpdateQCard = (props) => {
     const handleLoad = () => {
         axios.get("qCard/readComments/" + props.id)
         .then(response => {
+            console.log(response.data);
             const comments = ReactDOM.createRoot(document.getElementsByClassName('updateQcard-comments-ul')[0]);
 
             const commentsArray = [];
@@ -47,9 +50,13 @@ const UpdateQCard = (props) => {
                 <h1 className="updateQcard-header-back" onClick={handleBack}>←</h1>
                 <button className="updateQcard-header-delete" onClick={handleDelete}>Delete</button>
             </div>
-            <h1>Question</h1>
+            <div className='updateQcard-edit'>
+                <h1>Question</h1>
+                {/* <img src='/solved.png'></img> */}
+                {/* <button onClick={handleEdit}>edit</button> */}
+            </div>
             <div className='updateQcard-body'>
-                <div className='updateQcard-body-question'>{props.question}</div>
+                <textarea className="updateQcard-body-question" value={props.question} readOnly></textarea>
             </div>
             <h1>Comment</h1>
             <div className='updateQcard-comments'>
