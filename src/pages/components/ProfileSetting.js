@@ -22,20 +22,8 @@ const ProfileSetting = (props) => {
     const handleSubmit = (e) => {
     };
 
-    // const [imgFile, setImgFile] = useState({
-    //     img: null
-    // });
     const imgRef = useRef();
-    // const handleImgChange = (e) => {
-    //     console.log('asdfsadfsadf')
 
-    //     setImgFile({
-    //         ...imgFile,
-    //         [e.target.name]: e.target.files[0]
-    //     });
-
-    //     handleUpdateImg();
-    // };
     const handleUpdateImg = () => {
 
         const form = new FormData();
@@ -59,8 +47,6 @@ const ProfileSetting = (props) => {
     };
 
     return (
-
-
         <div className="profileSetting">
             
             <div className="profileSetting-header">
@@ -71,16 +57,19 @@ const ProfileSetting = (props) => {
             <div className="profileSetting-body">
                 <div className='profileSetting-body-top'>
                     <img onClick={handleUpdateImg} src={props.imgPath}></img><br/>
-                    <label className='profileSetting-body-top-label' htmlFor='profileImg'>프로필 이미지 추가</label>
+                    <label className='profileSetting-body-top-label' htmlFor='profileImg'>프로필 이미지 변경</label>
                     <input className="profileSetting-body-top-input" type='file' id="profileImg"  onChange={handleUpdateImg} ref={imgRef}></input>
-
-
-                    {/* <button onClick={handleDeleteImg}>이미지 삭제</button> */}
                 </div>
-                <h1>{props.name}</h1>
-                <div>{props.introduction}</div>
-
-
+                <div className='profileSetting-body-bottom'>
+                    <h2>username</h2>
+                    <div className='bottom-username'>
+                        <input type='text' defaultValue={props.name}></input>
+                    </div>
+                    <h2>introduction</h2>
+                    <div className='bottom-introduction'>
+                        <textarea defaultValue={props.introduction}></textarea>
+                    </div>
+                </div>
             </div>
             
             <div className="profileSetting-footer">

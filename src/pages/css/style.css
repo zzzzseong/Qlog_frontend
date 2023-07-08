@@ -592,6 +592,53 @@ body {
 .profileSetting-body-top {
     text-align: center;
 }
+.profileSetting-body-bottom {
+
+}
+.bottom-username {
+    width: 95%;
+    height: 40px;
+    padding: 10px;
+
+    background-color: #101216;
+    border-radius: 10px;
+    border: 1px solid #3b4a59;
+}
+.bottom-username input {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+
+    background-color: #101216;
+    color: white;
+
+    border: none;
+    resize: none;
+}
+.bottom-username input:focus {
+    outline: none;
+}
+.bottom-introduction {
+    width: 95%;
+    height: 80px;
+    padding: 10px;
+
+    background-color: #101216;
+    border-radius: 10px;
+    border: 1px solid #3b4a59;
+}
+.bottom-introduction textarea{
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+
+    background-color: #101216;
+    color: white;
+
+    border: none;
+    resize: none;
+}
+
 .profileSetting-body img {
     height: 200px;
     width: 200px;
@@ -629,4 +676,17 @@ body {
 .profileSetting-footer button {
     width: 300px;
     height: 40px;
+    /* color: white;
+
+    background-color: #101216;
+    border-radius: 10px;
+    border: 1px solid #3b4a59; */
 }
+.profileSetting-footer button:hover {
+    cursor: pointer;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;1,100&display=swap');
+* {
+    font-family: 'Alegreya Sans SC', sans-serif;
+} */
