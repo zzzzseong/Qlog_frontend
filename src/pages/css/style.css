@@ -577,6 +577,9 @@ body {
     margin-bottom: 10px;
     float: left;
 }
+.profileSetting-header-back:hover {
+    cursor: pointer;
+}
 .profileSetting-header-title {
     margin-top: 0px;
     margin-bottom: 10px;

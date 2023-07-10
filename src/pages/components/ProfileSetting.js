@@ -25,12 +25,8 @@ const ProfileSetting = (props) => {
     const imgRef = useRef();
 
     const handleUpdateImg = () => {
-
         const form = new FormData();
         form.append('image', imgRef.current.files[0]);
-        console.log(imgRef.current.files[0]);
-        // console.log(form);
-        // form.append('img', imgFile.img);
 
         axios.post('/user/image/upload', form, {
             headers: { 
