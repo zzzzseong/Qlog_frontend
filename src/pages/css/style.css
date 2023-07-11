@@ -589,14 +589,11 @@ body {
 }
 
 .profileSetting-body {
-    height: 640px;
+    height: 600px;
     /* background-color: blue; */
 }
 .profileSetting-body-top {
     text-align: center;
-}
-.profileSetting-body-bottom {
-
 }
 .bottom-username {
     width: 95%;
@@ -660,7 +657,7 @@ body {
     cursor: pointer;
 } */
 .profileSetting-body-top-label {
-    margin: 5px 0 20px 0;
+    margin: 5px 10px 20px 10px;
     font-weight: bold;
     font-size: 16px;
     color: #0095f6;
@@ -674,10 +671,11 @@ body {
 .profileSetting-footer {
     height: 60px;
     padding: 10px;
+    margin-top: 30px;
     text-align: center;
 }
 .profileSetting-footer button {
-    width: 300px;
+    width: 100%;
     height: 40px;
     /* color: white;
 
