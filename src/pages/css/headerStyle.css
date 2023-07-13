@@ -1,0 +1,26 @@
+.header {
+    height: 153px;
+    color: white;
+}
+.header-title {
+    float: left;
+    width: 150px;
+
+    padding: 40px;
+    margin-left: 20px;
+}
+.header-title:hover {
+    cursor: pointer;
+}
+.header-signout {
+    float: right;
+    font-size: 28px;
+    font-weight: 400;
+
+    padding: 40px;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+.header-signout:hover {
+    cursor: pointer;
+}

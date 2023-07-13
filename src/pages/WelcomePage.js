@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
 import './css/style.css';
+import './css/headerStyle.css';
 
 const Welcome = () => {
     const navigate = useNavigate();

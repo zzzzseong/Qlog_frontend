@@ -5,19 +5,10 @@ import ReactDOM from 'react-dom/client';
 import Qcard from './components/Qcard';
 import Profile from './components/Profile';
 import Explore from './components/Explore';
+import Header from './components/Header';
 
 
-const Home = () => {    
-    const handleSignOut = (e) => {
-        if(window.confirm('로그아웃 하시겠습니까?')) {
-            axios.put("/user/logout");
-            window.location.href = '/';
-        }
-    };
-
-    //const handleLoadImage = () => { //프로필 이미지는 따로 요청
-    // }
-
+const Home = () => {
     const handleLoad= () => {
         axios.get("/user/read")
         .then(response => {
@@ -58,10 +49,7 @@ const Home = () => {
 
     return (
         <div className='home'>
-            <div className="home-header">
-                <img className="home-title" src='/logo.png'></img>
-                <span className="home-signout" onClick={handleSignOut}>sign out</span>
-            </div>
+            <Header />
             <div className="home-body">
                 <div className="home-left">
                     <div className="home-left-container">
@@ -84,7 +72,6 @@ const Home = () => {
                 <div className="home-right">{/*createqcard component*/}</div>
             </div>
         </div>
-        
     );
 };
 

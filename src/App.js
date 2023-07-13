@@ -8,6 +8,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import WelcomePage from './pages/WelcomePage';
 import HomePage from './pages/HomePage';
+import ExplorePage from './pages/ExplorePage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/login" element={<LoginPage />}></Route>
           <Route path="/register" element={<RegisterPage />}></Route>
           <Route path="/home" element={<HomePage />}></Route>
+          <Route path="/explore" element={<ExplorePage />}></Route>
       </Routes>
     </BrowserRouter>
   );

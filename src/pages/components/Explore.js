@@ -9,6 +9,9 @@ const Explore = (props) => {
         const createQCard = ReactDOM.createRoot(document.getElementsByClassName('home-right')[0]);
         createQCard.render(React.createElement(CreateQCard, props, null));
     };
+    const handleSubmit = () => {
+        window.location.href = '/explore';
+    }
 
     return (
         <div className="explore">
@@ -24,7 +27,7 @@ const Explore = (props) => {
                     <input className="top-search"></input>
                 </div>
                 <div className="explore-body-bottom">
-                    <input className="bottom-submit" type="submit" value="Explore"></input>
+                    <input className="bottom-submit" type="submit" value="Explore" onClick={handleSubmit}></input>
                 </div>
             </div>
         </div>
