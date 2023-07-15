@@ -39,7 +39,14 @@ const ExploreQCard = () => {
                     </div>
                 </div>
                 <div className='explore-qcard-body-bottom'>
-
+                    <div className='explore-qcard-body-bottom-createDiv'>
+                        <div className='explore-qcard-body-bottom-createDiv-padding'>
+                            <textarea className='createDiv-textarea'></textarea>
+                            <input type='button' value='등록'></input>
+                        </div>
+                    </div>
+                    <div className='profile-border'></div>
+                    {/* 댓글 목록 */}
                 </div>
             </div>
 
