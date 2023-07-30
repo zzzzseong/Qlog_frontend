@@ -22,6 +22,12 @@ const ExploreQCard = () => {
             console.log(error);
         });
     };
+
+    const handleSubmit = (e) => {
+        axios.post('/comment/create/' + props.id, {
+            //얘는 props가 안넘어오는디.. 어떻게 해결해야 할까요..?!
+        });
+    };
     handleLoad();
 
     return (
@@ -42,7 +48,7 @@ const ExploreQCard = () => {
                     <div className='explore-qcard-body-bottom-createDiv'>
                         <div className='explore-qcard-body-bottom-createDiv-padding'>
                             <textarea className='createDiv-textarea'></textarea>
-                            <input type='button' value='등록'></input>
+                            <input type='button' value='등록' onClick={handleSubmit}></input>
                         </div>
                     </div>
                     <div className='profile-border'></div>

@@ -4,8 +4,8 @@ body {
 
 /*          welcome           */
 .welcome_header {
-    margin-top: 120px;
-    margin-bottom: 100px;
+    margin-top: 180px;
+    margin-bottom: 70px;
 }
 .welcome_body button {
     width: 200px;
@@ -29,6 +29,7 @@ body {
 
 /*          register           */
 .register-form {
+    margin-top: 30px;
     margin-bottom: 100px;
 }
 .register-form-header {
@@ -60,7 +61,7 @@ body {
     padding: 60px;
     background-color: #161A1E;
     border-radius: 10px;
-    border: 1px solid #3b4a59;
+    border: 1px solid #1C262F;
 }
 .register-form-body form .register-form-input {
     width: 100%;
@@ -85,6 +86,7 @@ body {
 
 /*          login           */
 .login-form {
+    margin-top: 30px;
     margin-bottom: 100px;
 }
 .login-form-header {
