@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import ReactDOM from 'react-dom/client';
 
 import Header from './components/Header';
 
 const ExploreQCard = () => {
+    const [comment, setComment] = useState({
+        comment: ''
+    });
+    const handleChange = (e) => {
+        setComment({
+            ...comment,
+            [e.target.name]: e.target.value
+        });
+    };
+
     const handleLoad= () => {
         axios.get("qCard/read/random")
         .then(response => {
@@ -17,15 +27,20 @@ const ExploreQCard = () => {
 
             const question = ReactDOM.createRoot(document.getElementsByClassName('explore-qcard-body-top-question')[0]);
             question.render(React.createElement('div', null, response.data.question));
+
+            //qCard에 comment 등록은 정상적으로 된다.. 하지만 textarea에서 onChange시 계속해서 qCard/read/random요청을 보내는 문제가 있음
+            document.getElementsByClassName('createDiv-submit')[0].addEventListener('click', () => {
+                axios.post("/comment/create/" + response.data.id, comment)
+                .then(response => {
+                    
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+            });    
         })
         .catch(error => {
             console.log(error);
-        });
-    };
-
-    const handleSubmit = (e) => {
-        axios.post('/comment/create/' + props.id, {
-            //얘는 props가 안넘어오는디.. 어떻게 해결해야 할까요..?!
         });
     };
     handleLoad();
@@ -47,8 +62,8 @@ const ExploreQCard = () => {
                 <div className='explore-qcard-body-bottom'>
                     <div className='explore-qcard-body-bottom-createDiv'>
                         <div className='explore-qcard-body-bottom-createDiv-padding'>
-                            <textarea className='createDiv-textarea'></textarea>
-                            <input type='button' value='등록' onClick={handleSubmit}></input>
+                            <textarea className='createDiv-textarea' name='comment' onChange={handleChange}></textarea>
+                            <input className='createDiv-submit' type='button' value='등록'></input>
                         </div>
                     </div>
                     <div className='profile-border'></div>
