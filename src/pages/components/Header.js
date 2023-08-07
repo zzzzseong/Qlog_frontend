@@ -4,7 +4,7 @@ import axios from 'axios';
 const Header = () => {
     const handleSignOut = (e) => {
         if(window.confirm('로그아웃 하시겠습니까?')) {
-            axios.put("/user/logout");
+            localStorage.removeItem('Jwt');
             window.location.href = '/';
         }
     };

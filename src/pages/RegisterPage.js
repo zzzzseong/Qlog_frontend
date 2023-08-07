@@ -21,7 +21,7 @@ const Register = () => {
         const form = new FormData();
         form.append('loginId', registerFormData.register);
     
-        axios.post('/user/duplication', form, {
+        axios.post('/user/auth/duplicate', form, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
@@ -47,7 +47,7 @@ const Register = () => {
         form.append('password', registerFormData.password);
         form.append('name', registerFormData.username);
 
-        axios.post('/user/register', form, {
+        axios.post('/user/auth/register', form, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
@@ -55,8 +55,8 @@ const Register = () => {
         .then(response => {
             // Handle response data
             alert("회원가입이 완료되었습니다.");
-            console.log("register success: ", response.data);
-            window.location.href = '/';
+            localStorage.setItem('Jwt', JSON.stringify(response.data.token));
+            window.location.href = '/home';
         })
         .catch(error => {
             // Handle error

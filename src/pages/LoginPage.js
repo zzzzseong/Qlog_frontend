@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import ReactDOM from 'react-dom/client';
+
+import Home from './HomePage';
 
 const Login = () => {
     const [formData, setFormData] = useState({
@@ -21,7 +24,7 @@ const Login = () => {
         form.append('loginId', formData.login);
         form.append('password', formData.password);
 
-        axios.post('/user/login', form, {
+        axios.post('/user/auth/authenticate', form, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
@@ -29,7 +32,9 @@ const Login = () => {
         .then(response => {
             // Handle response data
             if(response.data) { //true
-                console.log("login success: ", response.data);                
+                console.log("login success: ", response.data);
+                localStorage.setItem('Jwt', JSON.stringify(response.data.token));
+
                 window.location.href = '/home';
             } else { //false
                 alert("ID, Password를 확인해주세요.");

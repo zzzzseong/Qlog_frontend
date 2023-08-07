@@ -10,7 +10,11 @@ import Header from './components/Header';
 
 const Home = () => {
     const handleLoad= () => {
-        axios.get("/user/read")
+        axios.get("/user/read", {
+            headers: {
+                Authorization: 'Bearer ' + JSON.parse(localStorage.getItem('Jwt'))
+            }
+        })
         .then(response => {
             console.log(response.data);
 
@@ -42,7 +46,6 @@ const Home = () => {
             const explore = ReactDOM.createRoot(document.getElementsByClassName('home-right')[0]);
             explore.render(React.createElement(Explore, response.data, null));
             //Explore
-            
         });
     };
     handleLoad();
