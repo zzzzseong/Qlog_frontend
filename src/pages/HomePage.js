@@ -12,7 +12,8 @@ const Home = () => {
     const handleLoad= () => {
         axios.get("/user/read", {
             headers: {
-                Authorization: 'Bearer ' + JSON.parse(localStorage.getItem('Jwt'))
+                Authorization: 'Bearer ' + JSON.parse(localStorage.getItem('Jwt')),
+                Authorization2: 'Bearer ' + JSON.parse(localStorage.getItem('Jwt'))
             }
         })
         .then(response => {

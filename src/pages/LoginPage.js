@@ -31,6 +31,8 @@ const Login = () => {
         })
         .then(response => {
             // Handle response data
+            console.log(response.data.status);
+
             if(response.data) { //true
                 console.log("login success: ", response.data);
                 localStorage.setItem('Jwt', JSON.stringify(response.data.token));
